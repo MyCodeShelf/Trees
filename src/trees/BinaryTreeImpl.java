@@ -181,5 +181,13 @@ public int findMinimum(TreeNode n)
 	
 	return left!=null?left:right;
 	}
-
+public boolean isBST(TreeNode n,int min ,int max)
+{
+	if(n==null)
+		return true;
+	if(n.data>=max || n.data <min)
+		return false;
+	
+	return isBST(n.left, min, n.data) && isBST(n.right, n.data, max);
+}
 }

@@ -20,6 +20,7 @@ System.out.println(btree.findMinimum(btree.root));
 int d=btree.findDepth(btree.root);
 //btree.printLevelOrder(btree.root, d);
 System.out.println(btree.LowestCommonAncestor(btree.root, 8, 77).data);
+System.out.println(btree.isBST(btree.root, Integer.MIN_VALUE  , Integer.MAX_VALUE));
 	}
 
 }
