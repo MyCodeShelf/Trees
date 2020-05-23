@@ -12,15 +12,20 @@ btree.root.left.left=new TreeNode(77);
 btree.traverseInorder(btree.root);
 btree.traversePreorder(btree.root);
 btree.traversePostorder(btree.root);
-//System.out.println(btree.findLeafNode(btree.root));
+System.out.println("+++++++++++++++");
+System.out.println(btree.findLeafNode(btree.root));
 System.out.println(btree.findSize(btree.root));
 System.out.println(btree.lookup(btree.root, 7));
 System.out.println(btree.lookupNode(btree.root, 7));
 System.out.println(btree.findMinimum(btree.root));
 int d=btree.findDepth(btree.root);
-//btree.printLevelOrder(btree.root, d);
+System.out.println("Starting Level order traversal");
+btree.printLevelOrder(btree.root, d);
+System.out.println("End of Level order traversal");
 System.out.println(btree.LowestCommonAncestor(btree.root, 8, 77).data);
 System.out.println(btree.isBST(btree.root, Integer.MIN_VALUE  , Integer.MAX_VALUE));
+System.out.println("__________________________________");
+btree.findLeafNodeDetail(btree.root);
 	}
 
 }

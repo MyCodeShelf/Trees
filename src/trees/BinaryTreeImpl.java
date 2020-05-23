@@ -63,7 +63,7 @@ public void traverseLevelOrder(TreeNode n,int level)
 {
 	if(n==null)
 	{
-		System.out.println("Empty tree");
+	//	System.out.println("Empty tree");
 		return;
 	}
 	else if(level==1)
@@ -104,6 +104,22 @@ public int findLeafNode(TreeNode n)
 }
 	
 	return count;
+	}
+public void findLeafNodeDetail(TreeNode n)
+{
+	if (n == null) 
+        return ;
+	if(n.left==null && n.right==null)
+	{
+	System.out.println(n.data);
+		
+	}
+	else 
+	{
+	findLeafNodeDetail(n.left);
+	findLeafNodeDetail(n.right);
+}
+
 	}
 public int findDepth(TreeNode n)
 {
@@ -190,4 +206,5 @@ public boolean isBST(TreeNode n,int min ,int max)
 	
 	return isBST(n.left, min, n.data) && isBST(n.right, n.data, max);
 }
+
 }
