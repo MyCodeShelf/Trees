@@ -167,6 +167,19 @@ public int findMinimum(TreeNode n)
 		
 		return min;
 	}
-	
 }
+	public TreeNode LowestCommonAncestor(TreeNode r,int n1 ,int n2)
+	{
+		if(r==null)
+			return  null;
+		else if(r.data==n1 || r.data==n2)
+			return r;
+		TreeNode left=LowestCommonAncestor(r.left,n1,n2);
+		TreeNode right=LowestCommonAncestor(r.right,n1,n2);
+		if(left!=null && right!=null)
+			return r;
+	
+	return left!=null?left:right;
+	}
+
 }
