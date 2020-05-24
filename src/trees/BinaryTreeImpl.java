@@ -41,7 +41,7 @@ public void traversePreorder(TreeNode n)
 public void traversePostorder(TreeNode n)
 {
 	if (n==null)
-		return;
+		return; 
 	else
 	{
 		
@@ -68,7 +68,7 @@ public void traverseLevelOrder(TreeNode n,int level)
 	}
 	else if(level==1)
 		System.out.println(n.data);
-	else if(level>1)
+	else if(level>1) 
 	{
 		traverseLevelOrder(n.left, level-1);
 		traverseLevelOrder(n.right, level-1);
